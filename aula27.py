@@ -22,7 +22,7 @@ while True:
 
                     #calculo da media
 
-                    media = (notas[0] + notas[1] + notas[2] + notas[3]) /4
+               media = (notas[0] + notas[1] + notas[2] + notas[3]) /4
                     #aprovado, recuperacao, reprovado
                if faltas > 30:
                     situacao ="O aluno esta reprovado por falta"
