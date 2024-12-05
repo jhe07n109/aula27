@@ -39,12 +39,13 @@ while True:
                else:
                     situacao = "reprovado"
 
-                    alunos.append({nome, faltas, notas, media, situacao}) #guardando
-                    notas = []
-                    cont += 1
+               alunos.append({nome, faltas, notas, media, situacao}) #guardando
+               notas = []
+               cont += 1
                     
      #relatorio
      elif decisao == "2":
+          cont += 1
           if not alunos : #se nao tiver dados do aluno
                print("ainda nao tem dados de um aluno")
                #relatorio do aluno
