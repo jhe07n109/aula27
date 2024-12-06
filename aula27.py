@@ -25,9 +25,9 @@ while True:
                media = (notas[0] + notas[1] + notas[2] + notas[3]) /4
                     #aprovado, recuperacao, reprovado
                if faltas > 30:
-                    situacao ="O aluno esta reprovado por falta"
+                    situacao =" aluno esta reprovado por falta"
                elif media >= 8 and faltas <= 30: 
-                    situacao = "aprovado"
+                    situacao = "apOrovado"
                elif media >= 5 and faltas <= 30:
                     situacao = "recuperação"
                     recuperacao= float (input("nota da recuperação: "))
@@ -39,7 +39,7 @@ while True:
                else:
                     situacao = "reprovado"
 
-               alunos.append({nome, faltas, notas, media, situacao}) #guardando
+                    alunos.append({nome, faltas, notas, media, situacao}) #guardando
                notas = []
                cont += 1
                     
@@ -56,5 +56,8 @@ while True:
                print(f"media:{i[3]}")
                print(f"situacao{i[4]}")
      #encerramento
-          else:
+     elif decisao == "3": 
                print("the end")
+               break 
+     else:
+          print("digite um valor valido")
