@@ -1,5 +1,11 @@
 # CADASTRO DE USUÁRIO E SENHA 
 saldo = 0.0 # VARIAVEL QUE GUARDARÁ O SALDO DO USUÁRIO
+#DECLARAR FUNÇÃO 
+def validar_senha():
+    senha_validar = input("DIGITE SUA SENHA: ")
+    if senha_validar == senha :
+       return True #RETORNAR VERDADEIRO
+    
 while True:
      # MENU PRINCIPAL
      print("BEM VINDO! /n digite 1. Cadastrar 2. Login 3.Encerrar")
@@ -14,8 +20,7 @@ while True:
      elif escolha_menu == 2: #SE USUÁRIO ESCOLHER LOGIN
       #COMPARAR AS INF. CADASTRADAS COM UMA LEITURA 
       login_usuario = input("Digite seu usuário ")
-      login_senha = input("Digite sua senha ")
-      if login_usuario == usuario and login_senha == senha:
+      if login_usuario == usuario and validar_senha():
           print ("LOGIN REALIZADO COM SUCESSO")
           # SE O LOGIN CORRETO, ENTRA NO MENU PRINCIPAL DO APP
           print("BEM VINDO", usuario)
@@ -31,21 +36,19 @@ while True:
                 print("NOVO SALDO É: ", saldo)
              elif escolha_principal == 2: #SAQUE
                 valor_saque = float (input("DIGITE O VALOR DO SAQUE: "))
-                senha_saque = input("DIGITE SUA SENHA:")
-                if senha_saque == senha: # SENHA CORRETA 
+                
+                if validar_senha(): # SENHA CORRETA 
                    saldo = saldo - valor_saque #SUBTRAI O VALOR DO SALDO
                 else:
                    print("SENHA INCORRETA!")
              elif escolha_principal == 3: # SE O USUARIO ESCOLHER PIX
                 valor_pix = float (input("DIGITE O VALOR DO PIX: "))
-                senha_pix = (input("DIGITE SUA SENHA: "))
-                if senha_pix == senha:
+                if validar_senha ():
                    saldo = saldo - valor_pix
                 else:
                    print("Senha incorreta!")
              elif escolha_principal == 4: # SE O USUÁRIO ESCOLHER VISUALIZAR
-                senha_extrato = input ("DIGITE SUA SENHA: ")
-                if senha_extrato == senha:
+                if validar_senha == senha:
                    print("Extrato:", saldo)
                 else:
                    print("SENHA INCORRETA!")
